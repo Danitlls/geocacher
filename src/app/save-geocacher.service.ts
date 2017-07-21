@@ -13,11 +13,14 @@ export class SaveGeocacherService {
 
   getGeocacher(){
   return this.geocachers;
-  }
+};
 
   addGeocacher(newGeocacher: Geocacher){
     this.geocachers.push(newGeocacher);
-  }
+    console.log(newGeocacher);
+  };
+
+
 }
 
 

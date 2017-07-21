@@ -13,18 +13,25 @@
     <label for="newZipCode">Add zipcode</label>
     <input type="number" #newZipCode>
   </div>
-  <!-- <div class="">
+  <div class="">
     <label for="newLatitude">Add Latitud</label>
     <input type="number" #newLatitude>
   </div>
   <div class="">
     <label for="newLongitude">Add longitude</label>
     <input type="number" #newLongitude>
-  </div> -->
+  </div>
   <div class="">
     <label for="newCreator">Add creator/your name?</label>
     <input type="text" #newCreator>
   </div>
 
-  <button (click)="submitForm(newTitle.value, newPhisicalLocation.value, newZipCode.value, newCreator.value); newTitle.value=''; newPhisicalLocation.value = ''; newZipCode.value=''; newCreator.value='';">Add</button>
+  <button (click)="submitForm(newTitle.value, newPhisicalLocation.value, newZipCode.value, newLatitude.value, newLongitude.value, newCreator.value); newTitle.value=''; newPhisicalLocation.value = ''; newZipCode.value=''; newCreator.value=''; newLatitude.value=''; newLongitude.value='';">Add</button>
+</form>
+
+
+<form>
+  <label></label>
+  <input type="text" #newPhysicalAddress/>
+  <button (click)="getCoordenades(newPhysicalAddress.value)">get coordenates</button>
 </form>
