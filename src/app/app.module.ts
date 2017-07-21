@@ -11,6 +11,10 @@ import { routing } from './app.routing';
 //Firebase:
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+//components:
+import { WelcomeComponent } from './welcome/welcome.component';
+import { NewGeocacherComponent } from './new-geocacher/new-geocacher.component';
+import { GeocacherDetailComponent } from './geocacher-detail/geocacher-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +26,10 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    NewGeocacherComponent,
+    GeocacherDetailComponent
   ],
   imports: [
     BrowserModule,
