@@ -16,8 +16,8 @@ export class NewGeocacherComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(name: string) {
-   var newGeocacher: Geocacher = new Geocacher(name);
+  submitForm(title: string, phisicalLocation: string, zipCode: number, creator: string) {
+   var newGeocacher: Geocacher = new Geocacher(title, phisicalLocation, zipCode, creator);
    this.saveProductService.addGeocacher(newGeocacher);
  }
 }

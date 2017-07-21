@@ -1,7 +1,30 @@
 <p>Let's add a new Geocacher</p>
 
 <form>
-  <label for="newName"></label>
-  <input type="text" #newName>new name
-  <button (click)="submitForm(newName.value); newName.value='';">Add</button>
+  <div class="">
+    <label for="newTitle">New Title</label>
+    <input type="text" #newTitle>
+  </div>
+  <div class="">
+    <label for="newPhisicalLocation">New phisical location</label>
+    <input type="text" #newPhisicalLocation>
+  </div>
+  <div class="">
+    <label for="newZipCode">Add zipcode</label>
+    <input type="number" #newZipCode>
+  </div>
+  <!-- <div class="">
+    <label for="newLatitude">Add Latitud</label>
+    <input type="number" #newLatitude>
+  </div>
+  <div class="">
+    <label for="newLongitude">Add longitude</label>
+    <input type="number" #newLongitude>
+  </div> -->
+  <div class="">
+    <label for="newCreator">Add creator/your name?</label>
+    <input type="text" #newCreator>
+  </div>
+
+  <button (click)="submitForm(newTitle.value, newPhisicalLocation.value, newZipCode.value, newCreator.value); newTitle.value=''; newPhisicalLocation.value = ''; newZipCode.value=''; newCreator.value='';">Add</button>
 </form>
