@@ -8,9 +8,19 @@ export class SaveGeocacherService {
 
   constructor(private database: AngularFireDatabase) {
     this.geocachers = database.list('geocachers');
+    console.log(this.geocachers)
   }
 
   getGeocacher(){
   return this.geocachers;
+  }
+
+  addGeocacher(newGeocacher: Geocacher){
+    this.geocachers.push(newGeocacher);
+  }
 }
-}
+
+
+//   constructor(private database: AngularFireDatabase) {
+//     this.geocachers = af.list('geocachers');
+//   }

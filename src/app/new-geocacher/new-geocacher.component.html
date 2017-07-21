@@ -1,3 +1,7 @@
-<p>
-  new-geocacher works!
-</p>
+<p>Let's add a new Geocacher</p>
+
+<form>
+  <label for="newName"></label>
+  <input type="text" #newName>new name
+  <button (click)="submitForm(newName.value); newName.value='';">Add</button>
+</form>
