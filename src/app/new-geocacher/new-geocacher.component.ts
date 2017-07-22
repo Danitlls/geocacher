@@ -25,12 +25,13 @@ export class NewGeocacherComponent implements OnInit {
 
  getCoordenades(phisicalLocation: string){
    this.getGeoService.getCoordenades(phisicalLocation);
+
  }
 
- getGeocacher(){
-   this.saveGeoService.getGeocacher().then(result => {
-     console.warn('items from new geocacher', result)
-   });
+
+ // getGeocacher(){
+ //   this.saveGeoService.getGeocacher().then(result => {
+ //     console.warn('items from new geocacher', result)
+ //   });
 
  };
-}

@@ -23,7 +23,9 @@ export class SaveGeocacherService {
     this.geocachers.push(newGeocacher);
     console.log(newGeocacher);
   };
-
+  getGeocacherById(geocacherId: string){
+    return this.database.object('geocachers/' + geocacherId);
+  }
 
 }
 
