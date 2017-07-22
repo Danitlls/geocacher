@@ -1,13 +1,19 @@
 <p>Let's add a new Geocacher</p>
 
 <form>
+  <label>Enter the Location</label>
+  <input type="text" #newPhysicalAddress/>
+  <button (click)="getCoordenades(newPhysicalAddress.value)">get coordenates</button>
+</form>
+
+<form>
   <div class="">
     <label for="newTitle">New Title</label>
     <input type="text" #newTitle>
   </div>
   <div class="">
-    <label for="newPhisicalLocation">New phisical location</label>
-    <input type="text" #newPhisicalLocation>
+    <!-- <label for="newPhisicalLocation">New phisical location</label>
+    <input type="text" #newPhisicalLocation value=newPhysicalAddress.value> -->
   </div>
   <div class="">
     <label for="newZipCode">Add zipcode</label>
@@ -26,12 +32,10 @@
     <input type="text" #newCreator>
   </div>
 
-  <button (click)="submitForm(newTitle.value, newPhisicalLocation.value, newZipCode.value, newLatitude.value, newLongitude.value, newCreator.value); newTitle.value=''; newPhisicalLocation.value = ''; newZipCode.value=''; newCreator.value=''; newLatitude.value=''; newLongitude.value='';">Add</button>
+  <button (click)="submitForm(newTitle.value, newPhysicalAddress.value, newZipCode.value, newLatitude.value, newLongitude.value, newCreator.value); newTitle.value=''; newZipCode.value=''; newCreator.value=''; newLatitude.value=''; newLongitude.value='';">Add</button>
 </form>
 
 
-<form>
-  <label></label>
-  <input type="text" #newPhysicalAddress/>
-  <button (click)="getCoordenades(newPhysicalAddress.value)">get coordenates</button>
-</form>
+<button (click)="getGeocacher()">get list</button>
+<!-- , newPhisicalLocation.value, -->
+<!-- ; newPhisicalLocation.value = '' -->

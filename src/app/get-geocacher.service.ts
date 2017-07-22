@@ -37,8 +37,8 @@ export class GetGeocacherService {
       let foundAddress: Address;
       for(let result of response.json().results) {
         foundAddress = new Address(result.address_components[0].long_name, result.geometry.location.lat, result.geometry.location.lng);
-            //  result.geometry.location.lat, result.geometry.location.lng );
-        // return foundAddress;
+        let foundLatitude = result.geometry.location.lat;
+        let foundLongitude = result.geometry.location.lng;
         console.log(foundAddress);
       }
 

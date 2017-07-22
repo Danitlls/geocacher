@@ -12,7 +12,11 @@ export class SaveGeocacherService {
   }
 
   getGeocacher(){
-  return this.geocachers;
+    return new Promise(resolve => {
+      this.geocachers.subscribe(result => {
+      resolve(result)
+    })
+  })
 };
 
   addGeocacher(newGeocacher: Geocacher){
