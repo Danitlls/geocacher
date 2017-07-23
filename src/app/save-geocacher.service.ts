@@ -11,6 +11,13 @@ export class SaveGeocacherService {
     console.log(this.geocachers)
   }
 
+
+//Add geocacherItem to databese
+  addGeocacher(newGeocacher: Geocacher){
+    this.geocachers.push(newGeocacher);
+    console.log(newGeocacher);
+  };
+
   getGeocacher(){
     return new Promise(resolve => {
       this.geocachers.subscribe(result => {
@@ -19,10 +26,6 @@ export class SaveGeocacherService {
   })
 };
 
-  addGeocacher(newGeocacher: Geocacher){
-    this.geocachers.push(newGeocacher);
-    console.log(newGeocacher);
-  };
   getGeocacherById(geocacherId: string){
     return this.database.object('geocachers/' + geocacherId);
   }

@@ -16,11 +16,13 @@ export class ApiLocationComponent implements OnInit {
 
   getCoordenades(phisicalLocation: string){
     let location = this.geocacherApiService.getCoordenadesFromAddress(phisicalLocation);
-    console.log(location)
+    console.log(location);
+    return location;
   }
 
   getAddress(lat: number, lng: number){
     let address = this.geocacherApiService.getAddressFromCoordenates(lat, lng);
-    console.log(address)
+    console.log(address);
+    return address;
   }
 }

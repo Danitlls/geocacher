@@ -1,8 +1,3 @@
-<p>Let's add a new Geocacher</p>
-
-
-
-
 <!-- <div class="base-class" ng-class="myVar"> -->
 
   <form id="formNew" *featureToggle="true">
@@ -11,8 +6,8 @@
       <input type="text" #newTitle>
     </div>
     <div class="">
-      <!-- <label for="newPhisicalLocation">New phisical location</label>
-      <input type="text" #newPhisicalLocation value=newPhysicalAddress.value> -->
+      <label for="newPhysicalAddress">New phisical location</label>
+      <input type="text" #newPhysicalAddress>
     </div>
     <div class="">
       <label for="newZipCode">Add zipcode</label>
@@ -31,15 +26,15 @@
       <input type="text" #newCreator>
     </div>
 
-    <button (click)="submitForm(newTitle.value, newPhysicalAddress.value, newZipCode.value, newLatitude.value, newLongitude.value, newCreator.value); newTitle.value=''; newZipCode.value=''; newCreator.value=''; newLatitude.value=''; newLongitude.value='';">Add</button>
+    <button (click)="submitForm(newTitle.value, newPhysicalAddress.value, newZipCode.value, newLatitude.value, newLongitude.value, newCreator.value); newTitle.value=''; newPhisicalLocation.value=''; newZipCode.value=''; newCreator.value=''; newLatitude.value=''; newLongitude.value='';">Add</button>
   </form>
 
 <!-- </div> -->
 
-<!-- <h2>See All the Geocachers...</h2>
-<button (click)="getGeocacher()">get list</button> -->
+<h2>See All the Geocachers...</h2>
+<button (click)="getList()">get list</button>
 
-<app-geocacher-detail></app-geocacher-detail>
+<!-- <app-geocacher-detail></app-geocacher-detail>
 
 
 <div *featureToggle="true">
@@ -47,7 +42,7 @@
 </div>
 <div *featureToggle="false">
   condition is false and `featureToggle` is disabled.
-</div>
+</div> -->
 
 
 

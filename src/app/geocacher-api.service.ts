@@ -8,24 +8,25 @@ import { Geocacher } from './geocacher.model';
 
 // Makes the API call:
 export class GeocacherApiService {
-  phisicalLocation: string;
-  lat: number;
-  lng: number;
+  // phisicalLocation: string;
+  // lat: number;
+  // lng: number;
   constructor(private http: Http) {
     this.http = http;
   }
 
   getCoordenadesFromAddress(phisicalLocation: string){
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + phisicalLocation + "&key=" + geoKey.apyKey).subscribe(response => {
-      console.warn('response from get coordinates:', response.json());
+      console.warn('response from get coordinates:', response.json().results[0].geometry.location);
+      // how to return the value to make it accesible..?
+      return response.json().results[0].geometry.location;
     });
+
   }
 
   getAddressFromCoordenates(lat: number, lng: number){
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + ","+ lng  + "&key=" + geoKey.apyKey).subscribe(response => {
-      console.warn('response from get Address:', response.json())
+      console.warn('response from get Address:', response.json().results[0].formatted_address)
     });
   }
 }
-
-// latlng=40.714224,-73.961452
