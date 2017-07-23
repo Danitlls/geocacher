@@ -19,6 +19,7 @@ import { EditGeocacherComponent } from './edit-geocacher/edit-geocacher.componen
 
 //to use toggle:
 import { FeatureToggleModule } from 'angular2-feature-toggle';
+import { ApiLocationComponent } from './api-location/api-location.component';
 
 
 export const firebaseConfig = {
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     NewGeocacherComponent,
     GeocacherDetailComponent,
-    EditGeocacherComponent
+    EditGeocacherComponent,
+    ApiLocationComponent
   ],
   imports: [
     BrowserModule,

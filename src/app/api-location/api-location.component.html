@@ -1,0 +1,17 @@
+<section>
+
+  <form  *featureToggle="true">
+    <label>Enter the address</label>
+    <input type="text" #newPhysicalAddress/>
+    <!-- <input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"> -->
+    <!-- <input id="setbtn" type="checkbox" value="next" ng-click="myVar='my-class'"> -->
+    <button (click)="getCoordenades(newPhysicalAddress.value) ">get coordenates</button><br>
+
+    <p>Enter Cordenates:</p>
+    <label>Enter Latitude</label>
+    <input type="number" #newLatitude/>
+    <label>Enter Longitude</label>
+    <input type="number" #newLongitude/>
+    <button (click)="getAddress(newLatitude.value, newLongitude.value) ">get address</button>
+  </form>
+</section>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { SaveGeocacherService } from '../save-geocacher.service';
-import { GetGeocacherService } from '../get-geocacher.service';
+// import { GetGeocacherService } from '../get-geocacher.service';
 import { Geocacher } from '../geocacher.model';
 import { Address } from '../address.model';
 import { FirebaseListObservable } from 'angularfire2/database';
@@ -13,7 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
   selector: 'app-geocacher-detail',
   templateUrl: './geocacher-detail.component.html',
   styleUrls: ['./geocacher-detail.component.sass'],
-  providers: [SaveGeocacherService, GetGeocacherService]
+  providers: [SaveGeocacherService]
 })
 
 export class GeocacherDetailComponent implements OnInit {
@@ -21,7 +21,7 @@ export class GeocacherDetailComponent implements OnInit {
   geocacherId: string;
   geocacherToDisplay;
   // currentRoute: string = this.router.url;
-  constructor(private saveGeoService: SaveGeocacherService, private getGeoService: GetGeocacherService, private route: ActivatedRoute) {
+  constructor(private saveGeoService: SaveGeocacherService, private route: ActivatedRoute) {
   }
 
   // ngOnInit() {
