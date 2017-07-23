@@ -6,6 +6,11 @@
       <input type="text" #newTitle>
     </div>
     <div class="">
+      <label for="newCreator">Add creator/your name?</label>
+      <input type="text" #newCreator>
+    </div>
+    <h4>Add the Address:</h4>
+    <div class="">
       <label for="newPhysicalAddress">New phisical location</label>
       <input type="text" #newPhysicalAddress>
     </div>
@@ -13,6 +18,7 @@
       <label for="newZipCode">Add zipcode</label>
       <input type="number" #newZipCode>
     </div>
+    <h4>Or add the coordenates:</h4>
     <div class="">
       <label for="newLatitude">Add Latitud</label>
       <input type="number" #newLatitude>
@@ -21,10 +27,7 @@
       <label for="newLongitude">Add longitude</label>
       <input type="number" #newLongitude>
     </div>
-    <div class="">
-      <label for="newCreator">Add creator/your name?</label>
-      <input type="text" #newCreator>
-    </div>
+
 
     <button (click)="submitForm(newTitle.value, newPhysicalAddress.value, newZipCode.value, newLatitude.value, newLongitude.value, newCreator.value); newTitle.value=''; newPhysicalAddress.value=''; newZipCode.value=''; newCreator.value=''; newLatitude.value=''; newLongitude.value='';">Add</button>
   </form>

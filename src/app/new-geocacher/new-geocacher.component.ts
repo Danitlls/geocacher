@@ -46,12 +46,12 @@ export class NewGeocacherComponent implements OnInit {
         this.saveGeoService.addGeocacher(newGeocacher);
         });
     }
-    //  else if(phisicalLocation && latitude && longitude) {
-    //   var newGeocacher: Geocacher = new Geocacher(title, phisicalLocation, zipCode, latitude, longitude, creator);
-    //   this.saveGeoService.addGeocacher(newGeocacher);
-    // } else {
-    //   alert("Please enter either a physical address or latitude/longitude")
-    // }
+     else if(phisicalLocation && latitude && longitude) {
+      var newGeocacher: Geocacher = new Geocacher(title, phisicalLocation, zipCode, latitude, longitude, creator);
+      this.saveGeoService.addGeocacher(newGeocacher);
+    } else {
+      alert("Please enter either a physical address or latitude/longitude")
+    }
  }
 
 //Returns all the objects from the Firebase:
