@@ -21,19 +21,37 @@ export class NewGeocacherComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(title: string, phisicalLocation: string, zipCode: number, latitude: number, longitude: number,creator: string) {
+  submitForm(title: string, phisicalLocation: any, zipCode: number, latitude: any, longitude: any,creator: string) {
+    let latitudeFromAddress : any;
     // let latitudeFromAddress : number;
-    // // let latitudeFromAddress : number;
-    // let longitudeFromAddress: number;
-    // if (latitude === null){
-    //   latitudeFromAddress = this.geocacherApiService.getCoordenadesFromAddress(phisicalLocation);
-    //   // longitude = this.geocacherApiService.getCoordenadesFromAddress(phisicalLocation);
+    let longitudeFromAddress: any;
+    console.log("title:" , title, "p address:", phisicalLocation, "zip", zipCode, "lat:",latitude, "long:", longitude, "creator:",creator );
+
+    if (latitude === "" || longitude === ""){
+     this.geocacherApiService.getCoordenadesFromAddress(phisicalLocation).subscribe(response => {
+       console.warn('response from get coordinates:', response.json().results[0].geometry.location);
+
+       var coordinates = response.json().results[0].geometry.location;
+       var newGeocacher: Geocacher = new Geocacher(title, phisicalLocation, zipCode, coordinates.lat, coordinates.lng, creator);
+       this.saveGeoService.addGeocacher(newGeocacher);
+      });
+    }
+    else if (phisicalLocation === "") {
+      this.geocacherApiService.getAddressFromCoordenates(latitude, longitude).subscribe(response => {
+        console.warn('response from get Address:', response.json().results[0].formatted_address);
+
+
+        var pAddress = response.json().results[0].formatted_address;
+        var newGeocacher: Geocacher = new Geocacher(title, pAddress, zipCode, latitude, longitude, creator);
+        this.saveGeoService.addGeocacher(newGeocacher);
+        });
+    }
+    //  else if(phisicalLocation && latitude && longitude) {
+    //   var newGeocacher: Geocacher = new Geocacher(title, phisicalLocation, zipCode, latitude, longitude, creator);
+    //   this.saveGeoService.addGeocacher(newGeocacher);
+    // } else {
+    //   alert("Please enter either a physical address or latitude/longitude")
     // }
-    // if (longitude === null){
-    //   longitudeFromAddress = this.geocacherApiService.getCoordenadesFromAddress(phisicalLocation);
-    // }
-   var newGeocacher: Geocacher = new Geocacher(title, phisicalLocation, zipCode, latitude, longitude, creator);
-   this.saveGeoService.addGeocacher(newGeocacher);
  }
 
 //Returns all the objects from the Firebase:
