@@ -1,13 +1,15 @@
-<h2>See All the Geocachers...</h2>
-<button (click)="getList()">get list</button>
+<h2>See All the Geocachers...<button (click)="getList()">get list</button></h2>
+
+
+<h3></h3>
 <div *ngFor="let item of items | async">
-  <div >
-    <h3><em>{{item.title}}</em></h3>
-    <button (click)="goToDetailPage(item)">Details</button>
+  <div class="list">
+    <span><em>{{item.title}}</em><button (click)="goToDetailPage(item)">Details</button></span>
+
   </div>
 </div>
 
-<div *ngIf="showDetails">
+<div *ngIf="showDetails" class="list close">
   <button (click)="hideDetails()">Close Details</button>
   <app-geocacher-detail [geocacherToDisplay]="item"></app-geocacher-detail>
 </div>
