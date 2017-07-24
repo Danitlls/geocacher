@@ -1,5 +1,32 @@
 # Geocacher
 
+####  _Julu 21st, 2017_
+
+#### By **_Daniela Trulls_**
+
+## Description
+This is a website to display information about geocachers, user can add new geocachers to the database. App uses API call to get location either using physical address or coordenates provided by the user.
+
+## Known bugs
+
+* None at the time.
+
+
+#### _**Replicating this Project**_
+
+
+* Clone this Repository.
+* In terminal enter "git clone" & paste the copied link.
+  * "npm install" in terminal.
+* Create an "api-keys.ts" file in the "app" folder in order to use the application.
+* Sign up using your gmail account to access a Google Geocoding API key.
+* Add them using the form below to your "api-keys.ts" file.
+          export const geoKey = "{{API KEY GOES HERE}}";
+
+* Add this new file to the .gitignore file in order to keep your api keys private.
+* When you're ready to test, open a new terminal tab and run "ng serve".
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
@@ -26,3 +53,14 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Technologies Used
+
+_HTML, CSS, SASS, JavaSscript, TypeScript, Angular2, Angular CLI_
+
+### License
+
+MIT
+
+Copyright (c) 2017 **_Daniela Trulls_**
