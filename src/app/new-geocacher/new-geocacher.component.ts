@@ -54,11 +54,11 @@ export class NewGeocacherComponent implements OnInit {
     }
  }
 
-//Returns all the objects from the Firebase:
-  getList(){
-   this.saveGeoService.getGeocacher().then(result => {
-     console.warn('items from new geocacher', result)
-   });
-  };
+// //Returns all the objects from the Firebase:
+//   getList(){
+//    this.saveGeoService.getGeocacher().then(result => {
+//      console.warn('items from new geocacher', result)
+//    });
+//   };
 
 }

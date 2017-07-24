@@ -1,19 +1,7 @@
-
-
 <section>
-  <p>
-    geocacher-detail works!
-  </p>
-  <h2>See All the Geocachers...</h2>
-  <button (click)="getGeocacher()">get list</button>
-
-  <h3>Geocachers:</h3>
-  <div  *ngFor="let geocacher of geocachers">
-    <p (click)="getGeocacher()"> {{geocacher.title}}</p>
-
-
-      <app-edit-geocacher></app-edit-geocacher>
+      <!-- <app-edit-geocacher></app-edit-geocacher> -->
       <!-- <app-edit-geocacher [selectedGeocacher]="geocacher"></app-edit-geocacher> -->
-  </div>
+  <!-- </div> -->
+  {{geocacherToDisplay.title}}
 
 </section>

@@ -13,13 +13,14 @@ import { FirebaseListObservable } from 'angularfire2/database';
   selector: 'app-geocacher-detail',
   templateUrl: './geocacher-detail.component.html',
   styleUrls: ['./geocacher-detail.component.sass'],
-  providers: [SaveGeocacherService]
+  providers: [SaveGeocacherService],
+  inputs: ["geocacherToDisplay"]
 })
 
 export class GeocacherDetailComponent implements OnInit {
   geocachers: FirebaseListObservable<any[]>;
   geocacherId: string;
-  geocacherToDisplay;
+  geocacherToDisplay: {}
   // currentRoute: string = this.router.url;
   constructor(private saveGeoService: SaveGeocacherService, private route: ActivatedRoute) {
   }
@@ -28,16 +29,11 @@ export class GeocacherDetailComponent implements OnInit {
   //   this.geocachers = this.saveGeoService.getGeocacher();
   // }
   ngOnInit() {
-      this.route.params.forEach((urlParameters) => {
-       this.geocacherId = urlParameters['id'];
-     });
-     this.geocacherToDisplay = this.saveGeoService.getGeocacherById(this.geocacherId);
+    console.warn(this.geocacherToDisplay)
+    //   this.route.params.forEach((urlParameters) => {
+    //    this.geocacherId = urlParameters['id'];
+    //  });
+    //  this.geocacherToDisplay = this.saveGeoService.getGeocacherById(this.geocacherId);
 
     }
-  getGeocacher(){
-    this.saveGeoService.getGeocacher().then(result => {
-      console.warn('items from new geocacher', result)
-      return result
-    });
-  }
 }

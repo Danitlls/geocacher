@@ -19,12 +19,8 @@ export class SaveGeocacherService {
   };
 
   getGeocacher(){
-    return new Promise(resolve => {
-      this.geocachers.subscribe(result => {
-      resolve(result)
-    })
-  })
-};
+    return this.geocachers
+  };
 
   getGeocacherById(geocacherId: string){
     return this.database.object('geocachers/' + geocacherId);

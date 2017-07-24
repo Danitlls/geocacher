@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditGeocacherComponent } from './edit-geocacher.component';
+import { GeocacherListComponent } from './geocacher-list.component';
 
-describe('EditGeocacherComponent', () => {
-  let component: EditGeocacherComponent;
-  let fixture: ComponentFixture<EditGeocacherComponent>;
+describe('GeocacherListComponent', () => {
+  let component: GeocacherListComponent;
+  let fixture: ComponentFixture<GeocacherListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditGeocacherComponent ]
+      declarations: [ GeocacherListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditGeocacherComponent);
+    fixture = TestBed.createComponent(GeocacherListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

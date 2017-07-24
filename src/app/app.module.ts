@@ -15,11 +15,11 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NewGeocacherComponent } from './new-geocacher/new-geocacher.component';
 import { GeocacherDetailComponent } from './geocacher-detail/geocacher-detail.component';
-import { EditGeocacherComponent } from './edit-geocacher/edit-geocacher.component';
 
 //to use toggle:
 import { FeatureToggleModule } from 'angular2-feature-toggle';
 import { ApiLocationComponent } from './api-location/api-location.component';
+import { GeocacherListComponent } from './geocacher-list/geocacher-list.component';
 
 
 export const firebaseConfig = {
@@ -36,8 +36,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     NewGeocacherComponent,
     GeocacherDetailComponent,
-    EditGeocacherComponent,
-    ApiLocationComponent
+    ApiLocationComponent,
+    GeocacherListComponent
   ],
   imports: [
     BrowserModule,

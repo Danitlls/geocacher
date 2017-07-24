@@ -1,5 +1,4 @@
-<!-- <div class="base-class" ng-class="myVar"> -->
-
+<section>
   <form id="formNew" *featureToggle="true">
     <div class="">
       <label for="newTitle">New Title</label>
@@ -28,26 +27,6 @@
       <input type="number" #newLongitude>
     </div>
 
-
-    <button (click)="submitForm(newTitle.value, newPhysicalAddress.value, newZipCode.value, newLatitude.value, newLongitude.value, newCreator.value); newTitle.value=''; newPhysicalAddress.value=''; newZipCode.value=''; newCreator.value=''; newLatitude.value=''; newLongitude.value='';">Add</button>
-  </form>
-
-<!-- </div> -->
-
-<h2>See All the Geocachers...</h2>
-<button (click)="getList()">get list</button>
-
-<!-- <app-geocacher-detail></app-geocacher-detail>
-
-
-<div *featureToggle="true">
-  condition is true and `featureToggle` is enabled.
-</div>
-<div *featureToggle="false">
-  condition is false and `featureToggle` is disabled.
-</div> -->
-
-
-
-<!-- , newPhisicalLocation.value, -->
-<!-- ; newPhisicalLocation.value = '' -->
+    <button (click)="submitForm(newTitle.value, newPhysicalAddress.value, newZipCode.value, newLatitude.value, newLongitude.value, newCreator.value); newTitle.value=''; newPhysicalAddress.value=''; newZipCode.value=''; newCreator.value=''; newLatitude.value=''; newLongitude.value='';">Add a New Geocacher</button>
+  </form>  
+</section>
