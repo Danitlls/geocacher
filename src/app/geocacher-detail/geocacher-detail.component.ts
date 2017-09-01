@@ -4,7 +4,6 @@ import { Location } from '@angular/common';
 import { SaveGeocacherService } from '../save-geocacher.service';
 // import { GetGeocacherService } from '../get-geocacher.service';
 import { Geocacher } from '../geocacher.model';
-import { Address } from '../address.model';
 import { FirebaseListObservable } from 'angularfire2/database';
 // import { routing } from './app.routing';
 

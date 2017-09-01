@@ -1,5 +1,5 @@
 <section>
-  <form id="formNew" *featureToggle="true">
+  <form id="formNew" >
     <div class="">
       <label for="newTitle">New Title</label>
       <input type="text" #newTitle>
@@ -28,5 +28,5 @@
     </div>
 
     <button (click)="submitForm(newTitle.value, newPhysicalAddress.value, newZipCode.value, newLatitude.value, newLongitude.value, newCreator.value); newTitle.value=''; newPhysicalAddress.value=''; newZipCode.value=''; newCreator.value=''; newLatitude.value=''; newLongitude.value='';">Add a New Geocacher</button>
-  </form>  
+  </form>
 </section>

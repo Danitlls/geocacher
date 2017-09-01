@@ -17,7 +17,6 @@ import { NewGeocacherComponent } from './new-geocacher/new-geocacher.component';
 import { GeocacherDetailComponent } from './geocacher-detail/geocacher-detail.component';
 
 //to use toggle:
-import { FeatureToggleModule } from 'angular2-feature-toggle';
 import { ApiLocationComponent } from './api-location/api-location.component';
 import { GeocacherListComponent } from './geocacher-list/geocacher-list.component';
 
@@ -46,7 +45,6 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     routing,
-    FeatureToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
